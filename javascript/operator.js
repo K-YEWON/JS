@@ -29,45 +29,43 @@ console.log(`preDecrement: ${preDecrement}, counter: ${preDecrement}`);
 const postDecrement = counter--;
 console.log(`postDecrement: ${postDecrement}, counter: ${counter}`);
 
-// 4. Assigment operator
+// 4. Assignment operators
 let x = 3;
 let y = 6;
 x += y; // x = x + y;
-x -= y; // x = x - y;
-x *= y; // x = x * y;
-x /= y; // x = x / y;
+x -= y;
+x *= y;
+x /= y;
 
-// 5. Comparison operator
+// 5. Comparison operators
 console.log(10 < 6); // less than
-console.log(10 <=6); // less than or equal
-console.log(10 > 6); // greather than
-console.log(10 >=6); // greather than or equal
+console.log(10 <= 6); // less than or equal
+console.log(10 > 6); // greater than
+console.log(10 >= 6); // greater than or equal
 
-// 6. Logical operator: ||(or), &&(and), !(not)
-const val1 = false;
-const val2 = 4 < 2;
+// 6. Logical operators: || (or), && (and), ! (not)
+const value1 = true;
+const value2 = 4 < 2;
 
-// ||(or), finds the first truthy value
-console.log(`or: ${val1 || val2 || check()}`);
+// || (or), finds the first truthy value
+console.log(`or: ${value1 || value2 || check()}`);
 
-// &&(and), finds the first falsy value
-console.log(`and: ${val1 && val2 && check()}`);
-if(nullableObject != null){
-    nullableObject.something;
-}
+// && (and), finds the first falsy value
+console.log(`and: ${value1 && value2 && check()}`);
 
 // often used to compress long if-statement
-//nullableObject && nullableObjct.something
+// nullableObject && nullableObject.something
+
 function check() {
-    for (let i = 0; i < 10; i++){
-        //wasting time
-        console.log('Oops!');
-    }
-    return true;
+  for (let i = 0; i < 10; i++) {
+    //wasting time
+    console.log('😱');
+  }
+  return true;
 }
 
 // !(not)
-console.log(!val1);
+console.log(!value1);
 
 // 7. Equality
 const stringFive = '5';
@@ -100,4 +98,83 @@ console.log(null === undefined); // false
 
 // 8. Confitional operators: if
 // if, else if, else
-const name = 'yewon';
+const name = 'df';
+if (name === 'yewon') {
+  console.log('Welcome, yewon!');
+} else if (name === 'coder') {
+  console.log('You are amazing coder');
+} else {
+  console.log('unkwnon');
+}
+
+// 9. Ternary operator: ?
+// condition ? value1 : value2;
+console.log(name === 'yewon' ? 'yes' : 'no');
+
+// 10. SWitch statement
+// use for multiple if checks
+// use for enum-like value check
+// use for multiple type checks in TS
+const browser = 'IE';
+switch (browser) {
+    case 'IE':
+        console.log('go away!');
+        break;
+    case 'Chrome':
+    case 'Firefox':
+        console.log('love you!');
+        breck;
+    default:
+        console.log('same all!');
+        break;
+}
+
+// 11. Loops
+// while loop, while the condition is truthy,
+// body code is executed.
+let i = 3;
+while (i > 0) {
+    console.log(`while: ${i}`);
+    i--;
+}
+
+// do while loop, body code is executed first,
+// then check the condition/
+do {
+    console.log(`do while: ${i}`);
+    i--;
+}while (i > 0);
+
+// for loop, for(begin; condition; step)
+for (i = 3; i > 0; i--) {
+    console.log(`for: ${i}`);
+}
+
+for (let i = 3; i > 0; i = i - 2) {
+    //inline variable declaration
+    console.log(`inline variable for: ${i}`);
+}
+
+// nested loops
+for (let i = 0; i < 10; i++) {
+    for (let j = 0; j < 10; j++) {
+        console.log(`i: ${i}, j: ${j}`);
+    }
+}
+
+// break, continue
+// Q1. iterate from 0 to 10 and print only even numbers (use continue)
+for (i = 0; i <= 10; i++) {
+    if(i % 2 == 0){
+        console.log(`i: ${i}`);
+        continue;
+    }
+}
+
+//Q2. iterate from 0 to 10 and print numbers until reaching 8 (use break);
+for (i = 0; i <= 10; i++) {
+    console.log(`i: ${i}`);
+    if(i == 8){
+        break;
+    }
+}
