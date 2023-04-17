@@ -3,8 +3,9 @@
 // use this for Vanila Javascript.
 'use strict';
 
-// 2. Variable, rw(read/write)
+// 2. Variable(변수 : 변경될 수 있는 값), rw(read/write)
 // let (added in ES6)
+// Immutable 변할 수 있는, 잘 변하는
 let globalName = 'global name';
 {
   let name = 'ellie';
@@ -17,15 +18,16 @@ console.log(name);
 console.log(globalName);
 
 // var (don't ever use this!)
-// var hoisting (move declaration from bottom to top)
+// var hoisting (move declaration from bottom to top) * 호이스팅 : 어디에 선언했느냐와 상관없이 제일 상위로 끌어올리는 것
 // has no block scope
 {
-  age = 4;
+  age = 4; //변수 선언 전에 값 할당..(위험)
   var age;
 }
 console.log(age);
 
-// 3. Constant, r(read only)
+// 3. Constant, r(read only) 한번 할당하면 절대 바뀌지 않는 값
+// Immutable 변하지 않는
 // use const whenever possible.
 // only use let if variable needs to change.
 const daysInWeek = 7;
@@ -51,9 +53,9 @@ console.log(`value: ${count}, type: ${typeof count}`);
 console.log(`value: ${size}, type: ${typeof size}`);
 
 // number - speicla numeric values: infinity, -infinity, NaN
-const infinity = 1 / 0;
-const negativeInfinity = -1 / 0;
-const nAn = 'not a number' / 2;
+const infinity = 1 / 0; //Infinity
+const negativeInfinity = -1 / 0; //-Infinity
+const nAn = 'not a number' / 2; //NaN : 숫자가 아닌 값 
 console.log(infinity);
 console.log(negativeInfinity);
 console.log(nAn);
@@ -94,7 +96,7 @@ console.log(symbol1 === symbol2);
 const gSymbol1 = Symbol.for('id');
 const gSymbol2 = Symbol.for('id');
 console.log(gSymbol1 === gSymbol2); // true
-console.log(`value: ${symbol1.description}, type: ${typeof symbol1}`);
+console.log(`value: ${symbol1.description}, type: ${typeof symbol1}`); //.description를 이용하여 string type으로 변환 필요.
 
 // object, real-life object, data structure
 const ellie = { name: 'ellie', age: 20 };
