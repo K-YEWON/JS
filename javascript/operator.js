@@ -9,7 +9,7 @@ console.log(1 - 1); //substract
 console.log(1 / 1); //divide
 console.log(1 * 1); //multiply
 console.log(5 % 2); //remainder
-console.log(2 ** 3); //exponentiation
+console.log(2 ** 3); //exponentiation 2의 3승
 
 // 3. Increment and decrement operators
 let counter = 2;
@@ -48,7 +48,7 @@ const value1 = true;
 const value2 = 4 < 2;
 
 // || (or), finds the first truthy value
-console.log(`or: ${value1 || value2 || check()}`);
+console.log(`or: ${value1 || value2 || check()}`); 
 
 // && (and), finds the first falsy value
 console.log(`and: ${value1 && value2 && check()}`);
@@ -95,7 +95,7 @@ console.log('' == false); //true
 console.log('' === false); // false
 console.log(null == undefined); // true
 console.log(null === undefined); // false
-
+  
 // 8. Confitional operators: if
 // if, else if, else
 const name = 'df';
@@ -111,7 +111,7 @@ if (name === 'yewon') {
 // condition ? value1 : value2;
 console.log(name === 'yewon' ? 'yes' : 'no');
 
-// 10. SWitch statement
+// 10. SWitch statement 
 // use for multiple if checks
 // use for enum-like value check
 // use for multiple type checks in TS
