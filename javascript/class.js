@@ -54,3 +54,29 @@ console.log(user1.age);
 // 3. Fields (public, private)
 // Too soon!
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Class_fields
+class Experiment {
+    publicFiele = 2;
+    #privateField = 0;
+}
+const experiment = new Experiment();
+console.log(experiment.publicFiele);
+console.log(experiment.privateField);
+
+// 4. Static properties and methods
+// Too soon!
+class Article {
+    static publisher = 'Dream Coding';
+    constructor(articleNumber) {
+        this.articleNumber = articleNumber;
+    }
+
+static printPublisher() {
+    console.log(Article.publisher)
+    }
+}
+
+const article1 = new Article(1);
+const article2 = new Article(2);
+console.log(article1.publisher); //undefined
+console.log(Article.publisher);
+Article.printPublisher();
