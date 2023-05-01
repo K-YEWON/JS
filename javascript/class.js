@@ -18,7 +18,7 @@ class Person {
 
     //methods
     speak() {
-        console.log(`${this.name}: hello!`); // this. 생성된 Obejct에 접근
+        console.log(`${this.name}: hello!`); // this. : 생성된 Obejct에 접근
     }
 }
 
@@ -62,7 +62,7 @@ const experiment = new Experiment();
 console.log(experiment.publicFiele);
 console.log(experiment.privateField);
 
-// 4. Static properties and methods
+// 4. Static properties and methods 
 // Too soon!
 class Article {
     static publisher = 'Dream Coding';
